@@ -1,0 +1,89 @@
+/*layout*/
+
+/*variables*/
+$border-size-sm: 1px;
+$border-size-md: 4px;
+$border-size-lg: 8px;
+$break-sm-md: 720px;
+$break-md-lg: 1120px;
+$container-width-sm: 480px;
+$container-width-md: 720px;
+$container-width-lg: 1120px;
+$height-sm: 50px;
+$height-md: 100px;
+$height-lg: 400px;
+$margin-sm: 10px;
+$margin-md: 25px;
+$margin-lg: 75px;
+$padding-sm: 10px;
+$padding-md: 25px;
+$padding-lg: 75px;
+
+/*presets*/
+
+/*Red borders on everything*/
+*{
+	/*border: 1px dotted red !important;*/
+}
+
+/*Box-sizing*/
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Clearfix */
+@mixin clearfix {
+/*For modern browsers*/
+	&:before,
+	&:after {
+		content:"";
+		display:table;
+	}  
+	&:after {
+		clear:both;
+	}  
+	/*For IE 6/7 (trigger hasLayout)*/
+	& {
+		zoom:1;
+	}
+}
+
+/*Responsiveness*/
+@mixin respond-to-sm($break-sm-md){
+    @media only screen and (max-width: $break-sm-md){
+    	@content;
+    }
+}
+@mixin respond-to-md($break-sm-md, $break-md-lg){
+    @media only screen and (min-width: $break-sm-md + 1) and (max-width: $break-md-lg - 1){
+    	@content;
+    }
+}
+@mixin respond-to-lg($break-md-lg) {
+    @media only screen and (min-width: $break-md-lg){
+    	@content;
+    }
+}
+
+@mixin respond-to-sm-md($break-md-lg){
+    @media only screen and (max-width: $break-md-lg - 1){
+    	@content;
+    }
+}
+@mixin respond-to-md-lg($break-sm-md){
+    @media only screen and (min-width: $break-sm-md + 1){
+    	@content;
+    }
+}
+
+/*Vertical align center*/
+/*parent must have a given height*/
+@mixin vertical-align-center{
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}

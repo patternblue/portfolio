@@ -1,0 +1,283 @@
+/*Grid*/
+/*variables*/
+/*The parent row/container*/
+/*mixin for each column of grid*/
+/*color scheme*/
+/*variables*/
+/*$color-base: 	#2d9681;*/
+/*$color-accent: 	#bb7733;*/
+/*$color-accent: #f8a34b;*/
+/*presets*/
+/*layout*/
+/*variables*/
+/*presets*/
+/*Red borders on everything*/
+* {
+  /*border: 1px dotted red !important;*/ }
+
+/*Box-sizing*/
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Clearfix */
+/*Responsiveness*/
+/*Vertical align center*/
+/*parent must have a given height*/
+/*interface*/
+/*header*/
+/*Dropdown menu (e.g. on a nav button)*/
+/*type*/
+/*variables*/
+/*presets*/
+strong {
+  font-weight: 600; }
+
+a {
+  text-decoration: none;
+  letter-spacing: 1px; }
+
+/* 
+  Reset
+  http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1,
+h2,
+h3, h2, h3, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.row {
+  /*For modern browsers*/
+  /*For IE 6/7 (trigger hasLayout)*/ }
+  .row:before, .row:after {
+    content: "";
+    display: table; }
+  .row:after {
+    clear: both; }
+  .row {
+    zoom: 1; }
+
+h1, h2, h3 {
+  font-size: 36px;
+  font-family: helvetica;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 75px;
+  padding-bottom: 10px;
+  color: #666; }
+
+h2, h3 {
+  font-size: 18px;
+  margin-bottom: 25px; }
+
+h3 {
+  font-size: 14px;
+  margin-bottom: 10px; }
+
+p {
+  font-size: 14px;
+  font-family: monospace;
+  color: #666;
+  line-height: 20px;
+  margin-bottom: 25px; }
+
+#portfolio img {
+  border: solid #666 4px; }
+#portfolio .row {
+  margin-bottom: 75px; }
+  @media only screen and (min-width: 721px) {
+    #portfolio .row .col {
+      width: 46.5%;
+      /*margin-right: $gutterPercent;*/
+      float: left; }
+      #portfolio .row .col:nth-child(n) {
+        margin-right: 7%; }
+      #portfolio .row .col:last-child {
+        margin-right: 0; } }
+  #portfolio .row .wide {
+    width: 100%; }
+
+@media only screen and (min-width: 721px) {
+  #about p {
+    width: 73.25%;
+    /*margin-right: $gutterPercent;*/
+    float: left; }
+    #about p:nth-child(n) {
+      margin-right: 7%; }
+    #about p:last-child {
+      margin-right: 0; } }
+@media only screen and (min-width: 721px) {
+  #about #contact {
+    width: 19.75%;
+    /*margin-right: $gutterPercent;*/
+    float: left; }
+    #about #contact:nth-child(n) {
+      margin-right: 7%; }
+    #about #contact:last-child {
+      margin-right: 0; } }
+#about #contact li {
+  float: left;
+  clear: left;
+  border-bottom: dashed #77bb9e 1px;
+  padding-bottom: 10px;
+  margin-bottom: 25px; }
+  #about #contact li a {
+    font-family: monospace;
+    font-size: 14px; }
+    #about #contact li a:hover {
+      cursor: pointer;
+      color: #77bb9e; }
+
+body {
+  color: #252525;
+  background-color: #ddd; }
+
+#container {
+  background-color: #fff;
+  padding: 75px;
+  margin-left: auto;
+  margin-right: auto; }
+  #container .section {
+    margin-bottom: 75px; }
+    #container .section .section-heading {
+      width: 40%;
+      border-bottom: solid #ddd 4px; }
+      #container .section .section-heading:after {
+        clear: both; }
+  @media only screen and (max-width: 720px) {
+    #container {
+      width: 100%; }
+      #container .section .section-heading {
+        width: 100%; } }
+  @media only screen and (min-width: 721px) and (max-width: 1119px) {
+    #container {
+      width: 720px; } }
+  @media only screen and (min-width: 1120px) {
+    #container {
+      width: 1120px; } }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  font-family: helvetica;
+  background-color: #a5726a;
+  height: 100px; }
+  header + * {
+    margin-top: 100px; }
+  header #container-header {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    @media only screen and (max-width: 720px) {
+      header #container-header {
+        width: 100%; } }
+    @media only screen and (min-width: 721px) and (max-width: 1119px) {
+      header #container-header {
+        width: 720px; } }
+    @media only screen and (min-width: 1120px) {
+      header #container-header {
+        width: 1120px; } }
+    header #container-header .logo, header #container-header .nav {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+    header #container-header .logo {
+      float: left;
+      color: inherit;
+      font-size: 18px;
+      font-family: inherit;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-left: 10px; }
+    header #container-header .nav {
+      /*ul{*/
+      /*initial li*/
+      /*}*/
+      float: right; }
+      header #container-header .nav li {
+        position: relative;
+        display: inline-block;
+        /*secondary ul*/ }
+        header #container-header .nav li ul {
+          display: none;
+          background: inherit; }
+        header #container-header .nav li ul:hover, header #container-header .nav li:hover {
+          cursor: pointer;
+          /*secondary ul visibility change*/ }
+          header #container-header .nav li ul:hover ul, header #container-header .nav li:hover ul {
+            display: block;
+            position: absolute;
+            /*background: inherit;*/
+            width: 200px;
+            left: 0;
+            /*top: 0;*/
+            /*secondary li*/ }
+            header #container-header .nav li ul:hover ul li, header #container-header .nav li:hover ul li {
+              display: block;
+              /*width: 100%;*/ }
+              header #container-header .nav li ul:hover ul li:hover, header #container-header .nav li:hover ul li:hover {
+                background-color: #666666; }
+      header #container-header .nav li {
+        display: inline-block;
+        margin: 10px 10px; }
+    header #container-header a {
+      color: inherit;
+      font-size: 18px;
+      font-family: inherit;
+      font-weight: 600; }
+      header #container-header a:hover {
+        cursor: pointer;
+        color: #77bb9e; }
+
+footer {
+  height: 50px; }
+
+/*# sourceMappingURL=style.css.map */

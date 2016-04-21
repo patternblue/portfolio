@@ -1,0 +1,37 @@
+/*Grid*/
+
+/*variables*/
+$span1: 1;
+$span2: 2;
+$span3: 3;
+$span4: 4;
+$span5: 5;
+$span6: 6;
+$span7: 7;
+$span8: 8;
+$span9: 9;
+$span10: 10;
+$span11: 11;
+$span12: 12;
+$cols: 12;
+$gutterPercent: 7%;
+
+/*The parent row/container*/
+@mixin row(){
+	@include clearfix;
+}
+
+/*mixin for each column of grid*/
+@mixin col($i, $cols, $gutterPercent) {
+	width: ((100% - ($gutterPercent * ($cols - 1))) * ($i / $cols)) + ($gutterPercent * ($i - 1));
+	
+	/*margin-right: $gutterPercent;*/
+	&:nth-child(n) {
+		margin-right: $gutterPercent;
+	}
+
+	float: left;
+	&:last-child {
+		margin-right: 0;
+	}
+}

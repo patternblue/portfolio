@@ -1,0 +1,159 @@
+
+@import 'modules/base';
+@import 'vendors/base';
+
+.row{
+	@include row;
+}
+
+h1{
+	@include h1;
+	margin-bottom: 	$margin-lg;
+	padding-bottom: $padding-sm;
+	color: $color-h1;
+}
+h2{
+	@extend h1;
+	font-size: 		$font-size-md;
+	margin-bottom: $margin-md;
+}
+h3{
+	@extend h2;
+	font-size: 		$font-size-sm;	
+	margin-bottom: $margin-sm;
+}
+p {
+	font-size: $font-size-sm;
+	font-family: $font-family-fixed;
+	color: 		$color-text;
+	line-height: $line-height-sm;
+	margin-bottom: $margin-md;
+}
+#portfolio{
+	img{
+		border: solid $color-gray-normal $border-size-md;
+	}
+	.row{
+		margin-bottom: $margin-lg;
+		.col{
+			@include respond-to-md-lg($break-sm-md){
+				@include col($span6, $cols, $gutterPercent);
+			}
+		}
+		.wide{
+			width: 100%;
+		}
+	}
+}
+#about{
+	p{
+		@include respond-to-md-lg($break-sm-md){
+			@include col($span9, $cols, $gutterPercent);
+		}
+	}
+	#contact{
+		@include respond-to-md-lg($break-sm-md){
+			@include col($span3, $cols, $gutterPercent);
+		}		
+		li{
+			float: left;
+			clear: left;
+			border-bottom: dashed $color-base $border-size-sm;
+			padding-bottom: $padding-sm;
+			margin-bottom: $margin-md;
+			a{
+				@include a-hover($color-base);
+				font-family: $font-family-fixed;
+				font-size: $font-size-sm;
+			}
+		}
+	}
+}
+
+body{
+    color: $color-gray-dark;
+	background-color: $color-gray-light;
+}
+#container{
+	background-color: $color-white;
+	padding: $padding-lg;
+	margin-left: auto;
+	margin-right: auto;
+	.section{
+		margin-bottom: $margin-lg;
+		.section-heading{
+			width: 40%;
+			border-bottom: solid $color-border $border-size-md;
+			&:after{
+				clear: both;
+			};
+		}
+	}
+	@include respond-to-sm($break-sm-md){
+		width: 100%;
+		.section{
+			.section-heading{
+				width: 100%;
+			}
+		}
+	}
+	@include respond-to-md($break-sm-md, $break-md-lg){
+		width: $container-width-md;
+	}
+	@include respond-to-lg($break-md-lg){
+		width: $container-width-lg;
+	}
+}
+
+header{
+	@include header-fixed;
+	color: $color-white;
+	font-family: $font-family-base;
+	background-color: $color-accent;
+	height: $height-md;
+	#container-header{
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		@include respond-to-sm($break-sm-md){
+			width: 100%;
+		}
+		@include respond-to-md($break-sm-md, $break-md-lg){
+			width: $container-width-md;
+		}
+		@include respond-to-lg($break-md-lg){
+			width: $container-width-lg;
+		}
+		.logo, .nav{
+			@include vertical-align-center;
+		}
+		.logo{
+			float: left;
+			color: inherit;
+			font-size: $font-size-md;
+			font-family: inherit;
+			font-weight: $weight-bold;
+		    letter-spacing: $letter-spacing-sm;
+		    margin-left: $margin-sm;
+		}
+		.nav{
+			@include dropdown-menu;
+			float: right;
+			li{
+				display: inline-block;
+				margin: $margin-sm $margin-sm;
+			}
+		}
+		a{
+			color: inherit;
+			@include a-hover($color-base);
+			font-size: $font-size-md;
+			font-family: inherit;
+			font-weight: $weight-bold;
+		}
+	}
+}
+
+footer{
+	height: $height-sm;
+}

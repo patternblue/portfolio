@@ -1,0 +1,6 @@
+@mixin hover-background($color) {
+	&:hover{
+		background-color: darken($color, 10%);
+		transition: background-color 0.2s ease;
+	}
+}

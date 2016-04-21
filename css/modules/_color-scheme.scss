@@ -1,0 +1,25 @@
+/*color scheme*/
+
+/*variables*/
+$color-gray-dark: 	#252525;
+$color-gray-normal: #666;
+$color-gray-light: 	#ddd;
+$color-white: 		#fff;
+$color-warning:		#d4230f;
+
+$color-base: 	#77bb9e;
+/*$color-base: 	#2d9681;*/
+/*$color-accent: 	#bb7733;*/
+/*$color-accent: #f8a34b;*/
+$color-accent: #a5726a;
+
+/*presets*/
+$color-background: 		$color-white;
+$color-border: 			$color-gray-light;
+$color-text: 			$color-gray-normal;
+$color-text-strong:		$color-gray-dark;
+$color-text-em:			$color-gray-dark;
+$color-text-blockquote:	$color-gray-light;
+$color-h1: 				$color-gray-normal;
+$color-h2: 				$color-gray-dark;
+$color-h3: 				$color-white;
